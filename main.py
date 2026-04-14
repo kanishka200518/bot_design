@@ -178,8 +178,7 @@ class AutonomousRover:
                     derivative = error - self.last_error
                     motor_adjust = (self.Kp * error) + (self.Kd * derivative)
                     
-                    # INVERTED COMPENSATION: Since the physical motors are reversed, 
-                    # pushing the right wheel faster requires subtracting from it.
+                 
                     left_motor = config.DEFAULT_SPEED + motor_adjust
                     right_motor = config.DEFAULT_SPEED - motor_adjust
                     
