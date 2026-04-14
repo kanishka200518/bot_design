@@ -180,8 +180,8 @@ class AutonomousRover:
                     
                     # INVERTED COMPENSATION: Since the physical motors are reversed, 
                     # pushing the right wheel faster requires subtracting from it.
-                    left_motor = config.DEFAULT_SPEED - motor_adjust
-                    right_motor = config.DEFAULT_SPEED + motor_adjust
+                    left_motor = config.DEFAULT_SPEED + motor_adjust
+                    right_motor = config.DEFAULT_SPEED - motor_adjust
                     
                     # Constrain and apply
                     self.motors.move(left_motor, right_motor)
